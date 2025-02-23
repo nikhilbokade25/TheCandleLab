@@ -13,7 +13,6 @@ export default function Navbar() {
         navRef.current.classList.toggle("responsive_nav");
     };
 
-    
     return (
         <div className="header">
             <h2>The Candle Lab</h2>
