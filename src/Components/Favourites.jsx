@@ -1,7 +1,8 @@
 import './Favourites.css';
 import PRODUCT_DETAILS from './Data';
+import { FaHeart } from 'react-icons/fa';
 
-export default function Favourites({ favourites }) {
+export default function Favourites({ favourites, toggleFavourite }) {
   // Filter the products that are in the favourites list
   const favouriteProducts = PRODUCT_DETAILS.filter((product) =>
     favourites.includes(product.id)
@@ -18,6 +19,17 @@ export default function Favourites({ favourites }) {
               <div className="product_details">
                 <h3>{product.name}</h3>
                 <p>{product.price}</p>
+              </div>
+              <div className="product_buttons">
+                {/* Add to Cart Button */}
+                <button className="btn">ADD TO CART</button>
+                
+                {/* Heart Button for Toggling Favourite */}
+                <button
+                  className="btn"
+                  onClick={() => toggleFavourite(product.id)}>
+                  <FaHeart color={favourites.includes(product.id) ? 'red' : 'gray'} />
+                </button>
               </div>
             </div>
           ))
