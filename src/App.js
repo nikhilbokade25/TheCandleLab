@@ -11,6 +11,7 @@ function App() {
   const [favourites, setFavourites] = useState([]);
   const [cart, setCart] = useState([]);
 
+  // Toggle favourite products
   const toggleFavourite = (productId) => {
     setFavourites((prevFavourites) =>
       prevFavourites.includes(productId)
@@ -19,10 +20,9 @@ function App() {
     );
   };
 
+  // Add product to cart
   const addToCart = (productId) => {
-    if (!cart.includes(productId)) {
-      setCart((prevCart) => [...prevCart, productId]);
-    }
+    setCart((prevCart) => [...prevCart, productId]);
   };
 
   return (
@@ -31,14 +31,11 @@ function App() {
       <Routes>
         <Route path="/home" element={<Hero />} />
         <Route path="/shop" element={<Shop toggleFavourite={toggleFavourite} favourites={favourites} addToCart={addToCart} cart={cart} />} />
-        <Route path="/favourites" element={<Favourites favourites={favourites} toggleFavourite={toggleFavourite} />} />
-        <Route path="/cart" element={<Cart cart={cart} />} />
+        <Route path="favourites" element={<Favourites favourites={favourites} toggleFavourite={toggleFavourite} />} />
+        <Route path="cart" element={<Cart cart={cart} setCart={setCart} />} />
       </Routes>
     </>
   );
 }
 
 export default App;
-
-
-

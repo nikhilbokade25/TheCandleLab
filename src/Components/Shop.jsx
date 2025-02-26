@@ -2,7 +2,7 @@ import './Shop.css';
 import PRODUCT_DETAILS from './Data';
 import { FaHeart } from 'react-icons/fa';
 
-export default function Shop({ toggleFavourite, favourites, addToCart, cart }) {
+export default function Shop({ toggleFavourite, favourites = [], addToCart, cart = [] }) {
   return (
     <div className="shop_container">
       <div className="shop_products">
@@ -35,6 +35,3 @@ export default function Shop({ toggleFavourite, favourites, addToCart, cart }) {
     </div>
   );
 }
-
-
-
