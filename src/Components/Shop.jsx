@@ -35,3 +35,6 @@ export default function Shop({ toggleFavourite, favourites, addToCart, cart }) {
     </div>
   );
 }
+
+
+

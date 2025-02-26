@@ -46,6 +46,7 @@ nav a {
     z-index: 2;
     display: block;
     font-size: 25px;
+    visibility: hidden;
 }
 
 .nav_close_btn {
@@ -76,7 +77,6 @@ nav a {
 .nav_icons svg {
     font-size: 25px;
 }
-
 
 .count_badge {
     position: absolute;
