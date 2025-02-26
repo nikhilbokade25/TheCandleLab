@@ -5,7 +5,7 @@ import { useState } from 'react';
 export default function Cart({ cart, setCart }) {
   const [quantities, setQuantities] = useState(
     cart.reduce((acc, productId) => {
-      acc[productId] = 1; // Initial quantity of each product in the cart is 1
+      acc[productId] = 1;
       return acc;
     }, {})
   );
@@ -22,38 +22,32 @@ export default function Cart({ cart, setCart }) {
   const decreaseQuantity = (productId) => {
     setQuantities((prevQuantities) => {
       const newQuantity = prevQuantities[productId] - 1;
-
-      // Check if the new quantity is 1 before removing the product from the cart
       if (newQuantity === 1) {
-        return {
-          ...prevQuantities,
-          [productId]: newQuantity, // Set to 1
-        };
+        return { ...prevQuantities, [productId]: newQuantity };
       } else if (newQuantity <= 0) {
-        // If it's 0 or less, remove the product from the cart
         setCart((prevCart) => prevCart.filter((id) => id !== productId));
-        return prevQuantities; // Return the previous quantities to avoid setting a negative quantity
+        return prevQuantities;
       }
-
-      return {
-        ...prevQuantities,
-        [productId]: newQuantity,
-      };
+      return { ...prevQuantities, [productId]: newQuantity };
     });
   };
 
   const calculatePrice = (product, quantity) => {
-    // Convert the price from string to number
     const price = parseFloat(product.price.replace('$', ''));
-    
-    // If quantity is 2 or more, apply a discount or change the price
-    if (quantity >= 2) {
-      // Example: Apply a 10% discount for quantities of 2 or more
-      return `$${(price * quantity * 0.9).toFixed(2)}`; // Discounted price
-    } else {
-      return `$${(price * quantity).toFixed(2)}`; // Regular price
-    }
+    return quantity >= 2
+      ? `$${(price * quantity * 0.9).toFixed(2)}` // 10% discount
+      : `$${(price * quantity).toFixed(2)}`;
   };
+
+  // Calculate total number of items
+  const totalItems = Object.values(quantities).reduce((sum, quantity) => sum + quantity, 0);
+
+  // Calculate total price
+  const totalPrice = cartProducts.reduce((sum, product) => {
+    const price = parseFloat(product.price.replace('$', ''));
+    const quantity = quantities[product.id] || 1;
+    return sum + (quantity >= 2 ? price * quantity * 0.9 : price * quantity);
+  }, 0);
 
   return (
     <div className="cart_container">
@@ -65,7 +59,6 @@ export default function Cart({ cart, setCart }) {
               <img src={product.image} alt={product.name} className="cart_product_image" />
               <div className="cart_product_details">
                 <h3>{product.name}</h3>
-                {/* Display the updated price */}
                 <p>{calculatePrice(product, quantities[product.id])}</p>
                 <div className="quantity_controls">
                   <button className="quantity_btn" onClick={() => decreaseQuantity(product.id)}>-</button>
@@ -79,6 +72,15 @@ export default function Cart({ cart, setCart }) {
           <p>Your cart is empty!</p>
         )}
       </div>
+
+      {/* Total and Checkout Section */}
+      {cartProducts.length > 0 && (
+        <div className="cart_summary">
+          <p>Total Items: <span>{totalItems}</span></p>
+          <p>Total Price: <span>${totalPrice.toFixed(2)}</span></p>
+          <button className="checkout_btn">Proceed to Checkout</button>
+        </div>
+      )}
     </div>
   );
 }
