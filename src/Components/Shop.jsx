@@ -5,7 +5,9 @@ import { FaHeart } from 'react-icons/fa';
 export default function Shop({ toggleFavourite, favourites = [], addToCart, cart = [] }) {
   return (
     <div className="shop_container">
+        <h3>SHOP ALL PRODUCTS</h3>
       <div className="shop_products">
+        
         {PRODUCT_DETAILS.map((product) => {
           const isInCart = cart.includes(product.id);
 
