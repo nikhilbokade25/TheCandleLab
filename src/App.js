@@ -21,7 +21,7 @@ function App() {
 
   const addToCart = (productId) => {
     if (!cart.includes(productId)) {
-      setCart([...cart, productId]);
+      setCart((prevCart) => [...prevCart, productId]);
     }
   };
 

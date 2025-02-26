@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barrio&family=DM+Serif+Text:ital@0;1&family=Oswald:wght@200..700&display=swap');
 
-
 * {
     padding: 0;
     margin: 0;
@@ -16,7 +15,7 @@
     position: relative;
 }
 
-.header h2{
+.header h2 {
     font-family: "DM Serif Text", serif;
     font-size: 40px;
     font-weight: bold;
@@ -28,6 +27,7 @@ nav a {
     color: white;
     font-family: "Oswald", serif;
     font-size: 30px;
+    cursor: pointer;
 }
 
 .header .nav_btn {
@@ -60,7 +60,7 @@ nav a {
 .nav_icons {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     padding: 13px;
 }
 
@@ -70,15 +70,24 @@ nav a {
     padding: 10px;
     cursor: pointer;
     color: white;
+    position: relative;
 }
 
-.nav_btn {
-    visibility: hidden;
-    opacity: 0;
-}
-
-.nav_icons svg{
+.nav_icons svg {
     font-size: 25px;
+}
+
+
+.count_badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -117,7 +126,6 @@ nav a {
         transform: none;
     }
 
-    
     nav .nav_close_btn {
         position: absolute;
         top: 25px;

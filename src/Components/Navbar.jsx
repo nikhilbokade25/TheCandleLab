@@ -3,7 +3,7 @@ import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaHeart, FaShoppingCart, FaBars, FaTimes } from 'react-icons/fa';
 
-export default function Navbar({ favouritesCount, toggleFavourite }) {
+export default function Navbar({ favouritesCount, cartCount }) {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const navRef = useRef();
   const navigate = useNavigate();
@@ -30,12 +30,14 @@ export default function Navbar({ favouritesCount, toggleFavourite }) {
       </nav>
 
       <div className="nav_icons">
-        <button onClick={() => navigate('favourites')}>
+        <button onClick={() => navigate('favourites')} className="icon_btn">
           <FaHeart className='nav_btn_fav' />
-          {favouritesCount > 0 && <span className="fav_count">{favouritesCount}</span>}
+          {favouritesCount > 0 && <span className="count_badge">{favouritesCount}</span>}
         </button>
-        <button onClick={() => navigate('cart')}>
+        
+        <button onClick={() => navigate('cart')} className="icon_btn">
           <FaShoppingCart className='nav_btn_cart' />
+          {cartCount > 0 && <span className="count_badge">{cartCount}</span>}
         </button>
       </div>
 
