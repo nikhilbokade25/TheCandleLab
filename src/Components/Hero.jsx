@@ -1,5 +1,6 @@
 import './Hero.css';
 import heroBackgroundImg from "../Assets/hero_background2.jpg";
+import { Link } from 'react-router-dom'; 
 
 export default function Hero() {
     return (
@@ -8,7 +9,9 @@ export default function Hero() {
             
             <h2>Light Up Your Moments</h2>
             <p>Discover our wide variety of candles to brighten your day!</p>
-            <button>SHOP NOW</button>
+            <Link to="/shop">
+               <button>SHOP NOW</button>
+            </Link> 
             </div>
         
     );

@@ -22,7 +22,6 @@
 
 .product {
     width: calc(25% - 2px);
-    /* background-color: #f9eda0; */
     border: 1px solid black;
     height: 50vh;
     display: flex;
@@ -51,7 +50,6 @@
     align-items: center;
     width: 90%;
     margin-top: 10px;
-    
     padding-bottom: 5px;
 }
 
@@ -79,7 +77,8 @@
     width: 45%;
     padding: 8px 12px;
     font-size: 0.9rem;
-    background-color: #333;
+    background-color: black; 
+    color: white;
     color: white;
     border: none;
     cursor: pointer;
@@ -87,7 +86,8 @@
 }
 
 .product_buttons .btn:hover {
-    background-color: #555;
+    background-color: white; 
+    color: black;
 }
 
 @media only screen and (max-width: 800px) {

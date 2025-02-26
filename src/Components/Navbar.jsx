@@ -13,9 +13,13 @@ export default function Navbar({ favouritesCount, cartCount }) {
     navRef.current.classList.toggle("responsive_nav");
   };
 
+  const goToHome = () => {
+    navigate('/home');
+  };
+
   return (
     <div className="header">
-      <h2>The Candle Lab</h2>
+      <h2 onClick={goToHome}>The Candle Lab</h2>
       <nav ref={navRef}>
         <a onClick={() => navigate('/home')}>HOME</a>
         <a onClick={() => navigate('/about')}>ABOUT</a>
