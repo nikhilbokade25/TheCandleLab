@@ -7,6 +7,7 @@ import Shop from './Components/Shop';
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Connect from './Components/Connect';
+import About from './Components/About';
 
 function App() {
   const [favourites, setFavourites] = useState([]);
@@ -37,6 +38,7 @@ function App() {
         <Route path="favourites" element={<Favourites favourites={favourites} toggleFavourite={toggleFavourite} cart={cart} addToCart={addToCart} />} />
         <Route path="cart" element={<Cart cart={cart} setCart={setCart} />} />
         <Route path="/connect" element={<Connect/>} />
+        <Route path="/about" element={<About/>} />
       </Routes>
     </>
   );

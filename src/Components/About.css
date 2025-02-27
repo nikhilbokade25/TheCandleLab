@@ -1,0 +1,147 @@
+.about_container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about_text, .about_image{
+    width: 50%;
+    height: 90vh;
+    background-color: #d7e3fc;
+}
+
+.about_text{
+    order: 1;
+}
+
+.about_image{
+    order: 2;
+}
+
+
+.about_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about_text h1{
+    font-size: 50px;
+    margin-left: 17px;
+    font-family: "DM Serif Text", serif;
+}
+
+.about_text p{
+    margin-left: 17px;
+    font-size: 27px;
+    margin-top: 60px;
+}
+
+.about_text_1, .about_image_1{
+    width: 50%;
+    height: 100vh;
+}
+
+
+
+.about_text_1{
+    width: 50%;
+    order: 4;
+    background-color: #fcf4dd;
+}
+
+.about_image_1{
+    order: 3;
+    width: 50%;
+}
+
+.about_image_1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about_text_1 h1{
+    font-size: 50px;
+    margin-left: 17px;
+    font-family: "DM Serif Text", serif;
+}
+
+.about_text_1 p{
+    margin-left: 17px;
+    font-size: 27px;
+    margin-top: 30px;
+}
+
+.meet_team_container{
+    width: 100%;
+    height: 90vh;
+    order: 5;
+}
+
+.meet_team_container h1{
+    text-align: center;
+    margin-top: 20px;
+    font-family: "DM Serif Text", serif;
+    font-size: 50px;
+}
+
+.team_details{
+    width: 100%;
+    height: 70vh;
+    margin-top: 20px;
+    display: flex;
+}
+
+.team_profile{
+    width: 25%;
+    height: 100%;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.team_profile img{
+    width: 90%;
+    height: 80%;
+    object-fit: cover;
+    
+}
+
+@media screen and (max-width:800px){
+    .about_container{
+        flex-direction: column;
+    }
+
+    .about_image,.about_text{
+        width: 100%;
+    }
+
+    .about_text{
+        order: 2;
+    }
+    
+    .about_image{
+        order: 1;
+        height: 70vh;
+    }
+
+    .about_text_1, .about_image_1{
+        width: 100%;
+    }
+
+    .about_image_1{
+        height: 70vh;
+    }
+
+    .team_details{
+        flex-direction: column;
+    }
+
+    .team_profile{
+        width: 100%;
+    }
+}
