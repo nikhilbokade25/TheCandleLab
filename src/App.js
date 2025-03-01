@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Connect from './Components/Connect';
 import About from './Components/About';
+import Checkout from './Components/Checkout';
 
 function App() {
   const [favourites, setFavourites] = useState([]);
@@ -39,6 +40,7 @@ function App() {
         <Route path="cart" element={<Cart cart={cart} setCart={setCart} />} />
         <Route path="/connect" element={<Connect/>} />
         <Route path="/about" element={<About/>} />
+        <Route path="/checkout" element={<Checkout/>} />
       </Routes>
     </>
   );

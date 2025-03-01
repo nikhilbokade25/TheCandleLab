@@ -1,6 +1,7 @@
 import './Cart.css';
 import PRODUCT_DETAILS from './Data';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Cart({ cart, setCart }) {
   const [quantities, setQuantities] = useState(
@@ -49,6 +50,8 @@ export default function Cart({ cart, setCart }) {
     return sum + (quantity >= 2 ? price * quantity * 0.9 : price * quantity);
   }, 0);
 
+  const navigate = useNavigate();
+
   return (
     <div className="cart_container">
       <h2>Shopping Cart</h2>
@@ -78,7 +81,7 @@ export default function Cart({ cart, setCart }) {
         <div className="cart_summary">
           <p>Total Items: <span>{totalItems}</span></p>
           <p>Total Price: <span>${totalPrice.toFixed(2)}</span></p>
-          <button className="checkout_btn">Proceed to Checkout</button>
+          <button onClick={() => navigate('/checkout')} className="checkout_btn">Proceed to Checkout</button>
         </div>
       )}
     </div>
