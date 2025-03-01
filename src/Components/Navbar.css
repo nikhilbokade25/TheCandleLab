@@ -19,6 +19,7 @@
     font-family: "DM Serif Text", serif;
     font-size: 40px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 nav a {

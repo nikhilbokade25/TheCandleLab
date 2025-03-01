@@ -49,4 +49,6 @@ const PRODUCT_DETAILS = [
     }
 ];
 
-export default PRODUCT_DETAILS;
+const CAROUSEL_DATA = []
+
+export default {PRODUCT_DETAILS, CAROUSEL_DATA};

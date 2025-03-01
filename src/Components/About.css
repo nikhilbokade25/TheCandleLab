@@ -122,6 +122,7 @@
 
     .about_text{
         order: 2;
+        height: auto;
     }
     
     .about_image{
@@ -135,6 +136,10 @@
 
     .about_image_1{
         height: 70vh;
+    }
+
+    .about_text_1{
+        height: auto;
     }
 
     .team_details{
