@@ -5,7 +5,7 @@ import Cart from './Components/Cart';
 import Hero from './Components/Hero';
 import Shop from './Components/Shop';
 import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Connect from './Components/Connect';
 import About from './Components/About';
 import Checkout from './Components/Checkout';
@@ -34,6 +34,7 @@ function App() {
     <>
       <Navbar favouritesCount={favourites.length} cartCount={cart.length} />
       <Routes>
+        <Route path='/' element={<Navigate to="/home"/>} />
         <Route path="/home" element={<Hero />} />
         <Route path="/shop" element={<Shop toggleFavourite={toggleFavourite} favourites={favourites} addToCart={addToCart} cart={cart} />} />
         <Route path="favourites" element={<Favourites favourites={favourites} toggleFavourite={toggleFavourite} cart={cart} addToCart={addToCart} />} />
