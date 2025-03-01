@@ -8,9 +8,7 @@ export default function Hero() {
     return (
         <div className="hero_container">
             <div className='hero_img'>
-                
-
-                <img src={heroBackgroundImg} />
+                <img src={heroBackgroundImg}  alt='hero background'/>
                 <h2>Light Up Your Moments</h2>
                 <p>Discover our wide variety of candles to brighten your day!</p>
                 <Link to="/shop">
@@ -31,7 +29,7 @@ export default function Hero() {
             <div className='hero_footer'>
                 <div className='footer_mail'>
                     <div className='mail_text'>
-                        <img src={mailIcon} />
+                        <img src={mailIcon} alt='candle icon'/>
                         <p>Stay up to date with the latest product drops, exciting new workshops, and all the fun Milk Jar happenings!</p>
                         <button>JOIN MAILING LIST</button>
                     </div>
@@ -42,44 +40,43 @@ export default function Hero() {
                     <div className='footer_help'>
                     <h3>CUSTOMER CARE</h3>
                     <ul>
-                        <li><a href="#">Help & FAQs</a></li>
-                        <li><a href="#">Shipping</a></li>
-                        <li><a href="#">Returns & Exchanges</a></li>
-                        <li><a href="#">Order Tracking</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="/">Help & FAQs</a></li>
+                        <li><a href="/">Shipping</a></li>
+                        <li><a href="/">Returns & Exchanges</a></li>
+                        <li><a href="/">Order Tracking</a></li>
+                        <li><a href="/">Contact Us</a></li>
                     </ul>
                     </div>
 
                     <div className='footer_find'>
                         <h3>FIND US</h3>
                         <ul>
-                            <li><a href="#">Locate </a></li>
-                            <li><a href="#">Retailers</a></li>
-                            <li><a href="#">Store Near Me</a></li>
-                            <li><a href="#">Find A Shop</a></li>
+                            <li><a href="/">Locate </a></li>
+                            <li><a href="/">Retailers</a></li>
+                            <li><a href="/">Store Near Me</a></li>
+                            <li><a href="/">Find A Shop</a></li>
                         </ul>
                     </div>
 
                     <div className='footer_legal'>
-                    <h3>LEGAL</h3>
+                        <h3>LEGAL</h3>
                         <ul>
-                            <li><a href="#">Site map </a></li>
-                            <li><a href="#">Terms Of Use</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Ad Preferences</a></li>
+                            <li><a href="/">Site map </a></li>
+                            <li><a href="/">Terms Of Use</a></li>
+                            <li><a href="/">Privacy Policy</a></li>
+                            <li><a href="/">Ad Preferences</a></li>
                         </ul>
                     </div>
 
                     <div className='footer_connect'>
-                    <h3>CONNECT</h3>
+                        <h3>CONNECT</h3>
                         <ul>
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Instagram</a></li>
-                            <li><a href="#">Twitter</a></li>
+                            <li><a href="/">Facebook</a></li>
+                            <li><a href="/">Instagram</a></li>
+                            <li><a href="/">Twitter</a></li>
                         </ul>
                     </div>
                 </div>
-                
             </div>
         </div>
         

@@ -44,8 +44,6 @@
 }
 
 
-
-
 .connect_form {
     width: 100%;
     background-color: palegoldenrod;
@@ -122,13 +120,6 @@ button:hover {
     color: black;
     border: 1px solid black;
 }
-
-
-
-
-
-
-
 
 
 @media screen and (max-width:800px){

@@ -218,6 +218,7 @@
     .hero_img p {
         top: 50%;
         width: 90%;
+        font-size: 30px;
     }
 
     .hero_img button {
@@ -230,10 +231,12 @@
 
     .workshop_content{
         width: 80%;
+        height: 80vh;
     }
 
     .hero_footer{
         flex-direction: column;
+        height: auto;
     }
 
     .footer_mail, .footer_links{
@@ -254,6 +257,9 @@
     
     .footer_links {
         display: block;  
+        margin-top: 20px;
     }
+
+
     
 }
