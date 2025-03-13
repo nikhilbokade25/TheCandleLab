@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/TheCandleLab/static/css/main.f7f5d0da.css",
+    "main.js": "/TheCandleLab/static/js/main.01260a10.js",
+    "static/js/453.32ca009d.chunk.js": "/TheCandleLab/static/js/453.32ca009d.chunk.js",
+    "static/media/hero_background2.jpg": "/TheCandleLab/static/media/hero_background2.1fcd2376d1b8c83d101d.jpg",
+    "static/media/team_3.jpg": "/TheCandleLab/static/media/team_3.41c24e136e4417c04dc7.jpg",
+    "static/media/team_2.jpg": "/TheCandleLab/static/media/team_2.4ed876dc1f2d41e62e49.jpg",
+    "static/media/hero_workshop.jpg": "/TheCandleLab/static/media/hero_workshop.987e024c7926e9fced18.jpg",
+    "static/media/contact_image.png": "/TheCandleLab/static/media/contact_image.877eda5ed074f9519a11.png",
+    "static/media/candle_1.jpg": "/TheCandleLab/static/media/candle_1.47ddf0e28dd458023e2d.jpg",
+    "static/media/about_image.jpg": "/TheCandleLab/static/media/about_image.cf2482f23a3825f4d05a.jpg",
+    "static/media/about_image_1.jpg": "/TheCandleLab/static/media/about_image_1.4a25970fde4b19b3d540.jpg",
+    "static/media/candle_3.jpg": "/TheCandleLab/static/media/candle_3.9622590644cfaca0fa79.jpg",
+    "static/media/candle_7.jpg": "/TheCandleLab/static/media/candle_7.488624d8fc66b34b9927.jpg",
+    "static/media/candle_8.jpg": "/TheCandleLab/static/media/candle_8.68cae2ef8784915b5759.jpg",
+    "static/media/candle_5.jpg": "/TheCandleLab/static/media/candle_5.a9f3bf00ea16d8fea4ff.jpg",
+    "static/media/candle_2.jpg": "/TheCandleLab/static/media/candle_2.2bf194f6a4627bedfb55.jpg",
+    "static/media/candle_6.jpg": "/TheCandleLab/static/media/candle_6.fabeb6b63fe837539af6.jpg",
+    "static/media/candle_4.jpg": "/TheCandleLab/static/media/candle_4.d53ba8abf6dcdc383a4a.jpg",
+    "static/media/mail_icon.png": "/TheCandleLab/static/media/mail_icon.34a1129ddb6e45615312.png",
+    "index.html": "/TheCandleLab/index.html",
+    "main.f7f5d0da.css.map": "/TheCandleLab/static/css/main.f7f5d0da.css.map",
+    "main.01260a10.js.map": "/TheCandleLab/static/js/main.01260a10.js.map",
+    "453.32ca009d.chunk.js.map": "/TheCandleLab/static/js/453.32ca009d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f7f5d0da.css",
+    "static/js/main.01260a10.js"
+  ]
+}
