@@ -33,6 +33,7 @@ function App() {
   return (
     <>
       <Navbar favouritesCount={favourites.length} cartCount={cart.length} />
+      <Hero/>
       <Routes>
         <Route path='/' element={<Navigate to="/home"/>} />
         <Route path="/home" element={<Hero />} />

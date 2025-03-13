@@ -11,8 +11,8 @@ export default function Hero() {
                 <img src={heroBackgroundImg}  alt='hero background'/>
                 <h2>Light Up Your Moments</h2>
                 <p>Discover our wide variety of candles to brighten your day!</p>
-                <Link to="/shop">
                 
+                <Link to="/shop">
                 <button>SHOP NOW</button>
                 </Link>
             </div>
